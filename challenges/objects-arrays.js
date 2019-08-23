@@ -76,12 +76,10 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-
 for (i = 0; i < graduates.length; i++) {
-  graduates[i].university;    
   universities.push(graduates[i].university);
-  universities.sort();
 }
+universities.sort();
 
 console.log(universities)
 // universitiesSorted = universities.sort();
@@ -105,16 +103,20 @@ console.log(contactInfo);
 const unisWithUni = [];
 
  const university = [];
+
 for (let i = 0; i < graduates.length; i++) {
     university.push(graduates[i].university);
 }  
 for (let i = 0; i < graduates.length; i++) {
-    if (university[i].includes("Uni")) {
-    unisWithUni.push(university[i]);
+    if (graduates[i].university.includes("Uni")) {
+      unisWithUni.push({
+       name: graduates[i].university
+      })
+
     }
 }
+console.log(unisWithUni)
 
- console.log(unisWithUni);
 
 
 // ==== ADVANCED Array Methods ====
@@ -142,7 +144,7 @@ The zoos want to display both the scientific name and the animal name in front o
 const displayNames = [];
 
 zooAnimals.forEach(function(animal){
-  return displayNames.push `${animal.animal_name} ${animal.scientific_name}`
+  return displayNames.push(`${animal.animal_name} ${animal.scientific_name}`);
 })
 
 console.log(displayNames);
